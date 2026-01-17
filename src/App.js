@@ -9,7 +9,7 @@ import { generateUSMCAExcel } from "./utils/excelExporter";
 
 const App = () => {
   // Estados
-  const [file, setFile] = useState(null);
+  const [, setFile] = useState(null);
   const [rawData, setRawData] = useState(null);
   const [availablePartNumbers, setAvailablePartNumbers] = useState([]);
   const [selectedPartNumber, setSelectedPartNumber] = useState("");
