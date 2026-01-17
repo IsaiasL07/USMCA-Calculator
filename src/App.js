@@ -155,14 +155,21 @@ const App = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+        <header className="bg-white rounded-lg shadow-lg p-6 mb-6">
+        <div className="flex justify-between items-start">
           <h1 className="text-3xl font-bold text-indigo-900 flex items-center gap-3">
             📊 USMCA Analysis Calculator
           </h1>
+          <p className="text-white text-xs select-text">
+            Developer Isaias Lares
+          </p>
+          </div>
+          
           <p className="text-gray-600 mt-2">
             Calculadora de Análisis de Contenido Regional USMCA
           </p>
-        </div>
+          </header>
+        
 
         {/* Errores */}
         {errors.length > 0 && (
@@ -364,7 +371,7 @@ const App = () => {
                 🧮 Calcular Análisis
               </button>
               <button
-                onClick={resetAnalysis}
+                onClick={resetToPartNumberSelection}
                 className="px-6 py-3 border-2 border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               >
                 Cancelar
@@ -381,6 +388,23 @@ const App = () => {
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 📈 Resumen del Análisis
               </h2>
+              {/* Información del Part Number */}
+            <div className="bg-gray-50 p-4 rounded-lg mb-4 border-l-4 border-blue-950">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                <p className="text-sm text-gray-600 font-semibold">Part Number</p>
+                  <p className="text-lg font-bold text-gray-800">{partNumber}</p>
+                    </div>
+                <div>
+                <p className="text-sm text-gray-600 font-semibold">HTSUS Principal</p>
+                <p className="text-lg font-bold text-blue-900">{htsusMain}</p>
+                  </div>
+                    <div>
+                  <p className="text-sm text-gray-600 font-semibold">Descripción</p>
+                    <p className="text-lg font-bold text-gray-800 break-words line-clamp-2" title={partDescription}>{partDescription}</p>
+                      </div>
+                    </div>
+                    </div>
               <div className="grid grid-cols-3 gap-4 mb-6">
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <p className="text-sm text-gray-600">Total Materials</p>
