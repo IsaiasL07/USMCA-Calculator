@@ -152,7 +152,7 @@ const App = () => {
   // ============================================
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+    <div className="min-h-screen bg-main bg-cover bg-center bg-fixed">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <header className="bg-white rounded-lg shadow-lg p-6 mb-6">
